@@ -1,0 +1,643 @@
+---
+
+# Metadata to model
+info:
+  description: "FIWARE Smart Data Model definitions"
+  title: "FIWARE Smart Data Models"
+  version: "1.0.0"
+openapi: "3.0.0"
+
+
+# Paths for datamodel
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object
+
+# Actual schema for data model
+components:
+  schemas:
+      
+    ############
+    ## Device ##
+    ############
+    # Device data for an instance of a device that accomplishes a particular task like sensing, actuating, ... (dynamic attributes)
+    Device:
+      description: "An apparatus (hardware + software + firmware) intended to accomplish a particular task (sensing the environment, actuating, etc.)."
+      allOf:
+        - $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/Device/model.yaml#/Device"
+
+
+    #################
+    ## DeviceModel ##
+    #################
+    # Device data for a model of a device that accomplishes a particular task like sensing, actuating, ... (static attributes)
+    DeviceModel:
+      description: "This entity captures the static properties of a Device."
+      allOf:
+        - $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/DeviceModel/model.yaml#/DeviceModel"
+
+    #########
+    ## PLS ##
+    #########
+
+    ##########################
+    ## ChemicalSupplyDosing ##
+    ##########################
+    ChemicalSupplyDosing:
+      description: "Process management system function 'Chemical supply dosing' with KKS function code: 'GCN' (de: 'Chemikalienversorgung Dosierung')"
+      required:
+        - "id"
+        - "type"
+        - "dateObserved"
+        - "isSubsystemOf"
+      properties:
+        id:
+          anyOf:
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+              type: "string"
+            - description: "Property. Identifier format of any NGSI entity"
+              format: "uri"
+              type: "string"
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: "Property"
+        type:
+          description: "NGSI Entity type. it has to be ChemicalSupplyDosing                                  (a specific PCS part)"
+          enum:
+            - "ChemicalSupplyDosing"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        dateObserved:
+          description: "Date of the observed entity defined by the user."
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        isSubsystemOf:
+          description: "This component is a sub component of another system"
+          type: string
+          x-ngsi:
+            model: https://schema.org/URL
+            type: Relationship
+        kksFunction:
+          description: "KKS function of property (level 1)"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        0GCN10AP010/WAB_DosPu_NH4OH.SPOP_HL:
+          description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Upper set point operating limit)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0GCN10AP010/WAB_DosPu_NH4OH.FB_SPEED:
+          description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Speed of the actuator)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0GCN10AP010/WAB_DosPu_NH4OH.SP_AUT:
+          description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Automatic setpoint)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0GCN10AP010/WAB_DosPu_NH4OH.SP_GRAD:
+          description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Maximum permissible setpoint change per time base RSPTIME)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0GCN10AP010/WAB_DosPu_NH4OH.SP_OP:
+          description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Operator input Setpoint)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0GCN10AP010/WAB_DosPu_NH4OH.SP_RAMP:
+          description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Switching on the setpoint ramp)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0GCN10AP010/WAB_DosPu_NH4OH.SPOP_LL:
+          description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Lower set point operating limit)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+
+    ####################
+    ## DeionizedWater ##
+    ####################
+    DeionizedWater:
+      description: "Process management system function 'Deionized water' with KKS function code: 'GHC' (de: 'VEWasser')"
+      required:
+        - "id"
+        - "type"
+        - "dateObserved"
+        - "isSubsystemOf"
+      properties:
+        id:
+          anyOf:
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+              type: "string"
+            - description: "Property. Identifier format of any NGSI entity"
+              format: "uri"
+              type: "string"
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: "Property"
+        type:
+          description: "NGSI Entity type. it has to be DeionizedWater                                  (a specific PCS part)"
+          enum:
+            - "DeionizedWater"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        dateObserved:
+          description: "Date of the observed entity defined by the user."
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        isSubsystemOf:
+          description: "This component is a sub component of another system"
+          type: string
+          x-ngsi:
+            model: https://schema.org/URL
+            type: Relationship
+        kksFunction:
+          description: "KKS function of property (level 1)"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        0GHC20AA001/NivRV_SpWB.FB_MV:
+          description: "Deionized water Nr. 20 Aggregate Fitting Nr. 001  (Position feedback of a control valve)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+
+    ################
+    ## DuctSystem ##
+    ################
+    DuctSystem:
+      description: "Process management system function 'Duct system' with KKS function code: 'HLA' (de: 'Kanalsystem')"
+      required:
+        - "id"
+        - "type"
+        - "dateObserved"
+        - "isSubsystemOf"
+      properties:
+        id:
+          anyOf:
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+              type: "string"
+            - description: "Property. Identifier format of any NGSI entity"
+              format: "uri"
+              type: "string"
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: "Property"
+        type:
+          description: "NGSI Entity type. it has to be DuctSystem                                  (a specific PCS part)"
+          enum:
+            - "DuctSystem"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        dateObserved:
+          description: "Date of the observed entity defined by the user."
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        isSubsystemOf:
+          description: "This component is a sub component of another system"
+          type: string
+          x-ngsi:
+            model: https://schema.org/URL
+            type: Relationship
+        kksFunction:
+          description: "KKS function of property (level 1)"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        0HLA11DT021/T_RegAustrAbs_MW.IN13:
+          description: "Duct system Nr. 11 Control loop Temperature Nr. 021  (.IN13)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0HLA11DT021/T_RegAustrAbs_MW.IN12:
+          description: "Duct system Nr. 11 Control loop Temperature Nr. 021  (.IN12)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0HLA11DT021/T_RegAustrAbs_MW.IN16:
+          description: "Duct system Nr. 11 Control loop Temperature Nr. 021  (.IN16)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0HLA11DT021/T_RegAustrAbs_MW.IN15:
+          description: "Duct system Nr. 11 Control loop Temperature Nr. 021  (.IN15)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0HLA11DT021/T_RegAustrAbs_MW.IN14:
+          description: "Duct system Nr. 11 Control loop Temperature Nr. 021  (.IN14)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+
+    ##############
+    ## Receiver ##
+    ##############
+    Receiver:
+      description: "Process management system function 'Receiver' with KKS function code: 'WTX' (de: 'Receiver')"
+      required:
+        - "id"
+        - "type"
+        - "dateObserved"
+        - "isSubsystemOf"
+      properties:
+        id:
+          anyOf:
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+              type: "string"
+            - description: "Property. Identifier format of any NGSI entity"
+              format: "uri"
+              type: "string"
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: "Property"
+        type:
+          description: "NGSI Entity type. it has to be Receiver                                  (a specific PCS part)"
+          enum:
+            - "Receiver"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        dateObserved:
+          description: "Date of the observed entity defined by the user."
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        isSubsystemOf:
+          description: "This component is a sub component of another system"
+          type: string
+          x-ngsi:
+            model: https://schema.org/URL
+            type: Relationship
+        kksFunction:
+          description: "KKS function of property (level 1)"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        0WTX99CT910/MWtTempObFlaRec.U_WL:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (LL warning)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0WTX99CT910A/MAXWtTempRec.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910 A (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT910/MWtTempObFlaRec.U_WH:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (HL warning)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0WTX99CT910/MWtTempObFlaRec.U_AL:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (LL alarm)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0WTX99CT910/MWtTempObFlaRec.U_AH:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (HL alarm)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0WTX50CT001B/TempHoriTrennRec.U:
+          description: "Receiver Nr. 50 Measuring circuit Temperature Nr. 001 B (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT910A/SP_T_Rec_Grad_D1.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910 A (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT910/MWtTempObFlaRec.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT910A/SP_T_Rec_Grad_D2.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910 A (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT910A/SP_T_Rec_Grad_WH.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910 A (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT940B/MAXTDiff_TrgRah.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 940 B (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT940C/MAXTDiff_KuLuAus.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 940 C (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT910A/MWtTempRec.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910 A (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT910/MAXWtTempObFlaRe.U_WL:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (LL warning)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0WTX99CT950C/MAXTDiff_KuLu_WL.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 950 C (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT910/MAXWtTempObFlaRe.U_AL:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (LL alarm)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0WTX99CT910/MAXWtTempObFlaRe.U_AH:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (HL alarm)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0WTX99CT910/MAXWtTempObFlaRe.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX50CT901B/MAXTempTrennRec.U:
+          description: "Receiver Nr. 50 Measuring circuit Temperature Nr. 901 B (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX50CT002B/TempVertTrennRec.U:
+          description: "Receiver Nr. 50 Measuring circuit Temperature Nr. 002 B (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT950B/MAXTDiff_Rah_Mem.U:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 950 B (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX30CT901C/MAXT_KuKanSeWdLu.U:
+          description: "Receiver Nr. 30 Measuring circuit Temperature Nr. 901 C (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0WTX99CT910/MAXWtTempObFlaRe.U_WH:
+          description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (HL warning)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+
+    #######################
+    ## SteamTurbinePlant ##
+    #######################
+    SteamTurbinePlant:
+      description: "Process management system function 'Steam turbine plant' with KKS function code: 'BLE' (de: 'Dampfturbinenanlage')"
+      required:
+        - "id"
+        - "type"
+        - "dateObserved"
+        - "isSubsystemOf"
+      properties:
+        id:
+          anyOf:
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+              type: "string"
+            - description: "Property. Identifier format of any NGSI entity"
+              format: "uri"
+              type: "string"
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: "Property"
+        type:
+          description: "NGSI Entity type. it has to be SteamTurbinePlant                                  (a specific PCS part)"
+          enum:
+            - "SteamTurbinePlant"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        dateObserved:
+          description: "Date of the observed entity defined by the user."
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        isSubsystemOf:
+          description: "This component is a sub component of another system"
+          type: string
+          x-ngsi:
+            model: https://schema.org/URL
+            type: Relationship
+        kksFunction:
+          description: "KKS function of property (level 1)"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        0BLE10CS002/Drehzahl_DT.U_WL:
+          description: "Steam turbine plant Nr. 10 Measuring circuit velocity speed frequency Nr. 002  (LL warning)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0BLE10CS002/Drehzahl_DT.U_WH:
+          description: "Steam turbine plant Nr. 10 Measuring circuit velocity speed frequency Nr. 002  (HL warning)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0BLE10CS002/Drehzahl_DT.U_AH:
+          description: "Steam turbine plant Nr. 10 Measuring circuit velocity speed frequency Nr. 002  (HL alarm)"
+          type: "boolean"
+          x-ngsi:
+            model: "https://schema.org/Boolean"
+            type: "Property"
+        0BLE10CS002/Drehzahl_DT.U:
+          description: "Steam turbine plant Nr. 10 Measuring circuit velocity speed frequency Nr. 002  (Analog value measurement)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+
+    #################
+    ## Superheater ##
+    #################
+    Superheater:
+      description: "Process management system function 'Superheater' with KKS function code: 'HAH' (de: 'Ueberhitzer')"
+      required:
+        - "id"
+        - "type"
+        - "dateObserved"
+        - "isSubsystemOf"
+      properties:
+        id:
+          anyOf:
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+              type: "string"
+            - description: "Property. Identifier format of any NGSI entity"
+              format: "uri"
+              type: "string"
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: "Property"
+        type:
+          description: "NGSI Entity type. it has to be Superheater                                  (a specific PCS part)"
+          enum:
+            - "Superheater"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        dateObserved:
+          description: "Date of the observed entity defined by the user."
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        isSubsystemOf:
+          description: "This component is a sub component of another system"
+          type: string
+          x-ngsi:
+            model: https://schema.org/URL
+            type: Relationship
+        kksFunction:
+          description: "KKS function of property (level 1)"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        0HAH20CT002/T_DamAusUebHitz2.PV_IN:
+          description: "Superheater Nr. 20 Measuring circuit Temperature Nr. 002  (Analog value controller)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+        0HAH20CT002/T_DamAusUebHitz2.LMN:
+          description: "Superheater Nr. 20 Measuring circuit Temperature Nr. 002  (Control value controller)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"
+
+    ###################
+    ## TransferMeter ##
+    ###################
+    TransferMeter:
+      description: "Process management system function 'Transfer meter' with KKS function code: 'GKA' (de: 'Uebernahme Zaehler')"
+      required:
+        - "id"
+        - "type"
+        - "dateObserved"
+        - "isSubsystemOf"
+      properties:
+        id:
+          anyOf:
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+              type: "string"
+            - description: "Property. Identifier format of any NGSI entity"
+              format: "uri"
+              type: "string"
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: "Property"
+        type:
+          description: "NGSI Entity type. it has to be TransferMeter                                  (a specific PCS part)"
+          enum:
+            - "TransferMeter"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        dateObserved:
+          description: "Date of the observed entity defined by the user."
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        isSubsystemOf:
+          description: "This component is a sub component of another system"
+          type: string
+          x-ngsi:
+            model: https://schema.org/URL
+            type: Relationship
+        kksFunction:
+          description: "KKS function of property (level 1)"
+          type: "string"
+          x-ngsi:
+            type: "Property"
+        0GKA10CF501/DurFl_RoWa_.ZAEHLWERT:
+          description: "Transfer meter Nr. 10 Measuring circuit flow flow rate Nr. 501  (Counter)"
+          type: "number"
+          x-ngsi:
+            model: "https://schema.org/Number"
+            type: "Property"

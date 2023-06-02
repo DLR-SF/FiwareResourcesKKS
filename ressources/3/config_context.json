@@ -1,0 +1,308 @@
+
+
+
+###################
+# CONTEXT SECTION #
+###################
+    contexts: [
+        {
+            id: "urn:ngsi-ld:PCS-STJ:ChemicalSupplyDosing:10",
+            type: "ChemicalSupplyDosing",
+            mappings: [
+                {
+                    ocb_id: "0GCN10AP010/WAB_DosPu_NH4OH.SPOP_HL",
+                    opcua_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SPOP_HL",
+                    object_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SPOP_HL",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0GCN10AP010/WAB_DosPu_NH4OH.FB_SPEED",
+                    opcua_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.FB_SPEED",
+                    object_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.FB_SPEED",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0GCN10AP010/WAB_DosPu_NH4OH.SP_AUT",
+                    opcua_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SP_AUT",
+                    object_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SP_AUT",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0GCN10AP010/WAB_DosPu_NH4OH.SP_GRAD",
+                    opcua_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SP_GRAD",
+                    object_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SP_GRAD",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0GCN10AP010/WAB_DosPu_NH4OH.SP_OP",
+                    opcua_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SP_OP",
+                    object_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SP_OP",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0GCN10AP010/WAB_DosPu_NH4OH.SP_RAMP",
+                    opcua_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SP_RAMP",
+                    object_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SP_RAMP",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0GCN10AP010/WAB_DosPu_NH4OH.SPOP_LL",
+                    opcua_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SPOP_LL",
+                    object_id: "ns=3;s=0GCN10AP010//WAB_DosPu_NH4OH.SPOP_LL",
+                    inputArguments: []
+                }
+            ]
+        },
+        {
+            id: "urn:ngsi-ld:PCS-STJ:DeionizedWater:20",
+            type: "DeionizedWater",
+            mappings: [
+                {
+                    ocb_id: "0GHC20AA001/NivRV_SpWB.FB_MV",
+                    opcua_id: "ns=3;s=0GHC20AA001//NivRV_SpWB.FB_MV",
+                    object_id: "ns=3;s=0GHC20AA001//NivRV_SpWB.FB_MV",
+                    inputArguments: []
+                }
+            ]
+        },
+        {
+            id: "urn:ngsi-ld:PCS-STJ:DuctSystem:11",
+            type: "DuctSystem",
+            mappings: [
+                {
+                    ocb_id: "0HLA11DT021/T_RegAustrAbs_MW.IN13",
+                    opcua_id: "ns=3;s=0HLA11DT021//T_RegAustrAbs_MW.IN13",
+                    object_id: "ns=3;s=0HLA11DT021//T_RegAustrAbs_MW.IN13",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0HLA11DT021/T_RegAustrAbs_MW.IN12",
+                    opcua_id: "ns=3;s=0HLA11DT021//T_RegAustrAbs_MW.IN12",
+                    object_id: "ns=3;s=0HLA11DT021//T_RegAustrAbs_MW.IN12",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0HLA11DT021/T_RegAustrAbs_MW.IN16",
+                    opcua_id: "ns=3;s=0HLA11DT021//T_RegAustrAbs_MW.IN16",
+                    object_id: "ns=3;s=0HLA11DT021//T_RegAustrAbs_MW.IN16",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0HLA11DT021/T_RegAustrAbs_MW.IN15",
+                    opcua_id: "ns=3;s=0HLA11DT021//T_RegAustrAbs_MW.IN15",
+                    object_id: "ns=3;s=0HLA11DT021//T_RegAustrAbs_MW.IN15",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0HLA11DT021/T_RegAustrAbs_MW.IN14",
+                    opcua_id: "ns=3;s=0HLA11DT021//T_RegAustrAbs_MW.IN14",
+                    object_id: "ns=3;s=0HLA11DT021//T_RegAustrAbs_MW.IN14",
+                    inputArguments: []
+                }
+            ]
+        },
+        {
+            id: "urn:ngsi-ld:PCS-STJ:Receiver:99",
+            type: "Receiver",
+            mappings: [
+                {
+                    ocb_id: "0WTX99CT910/MWtTempObFlaRec.U_WL",
+                    opcua_id: "ns=3;s=0WTX99CT910//MWtTempObFlaRec.U_WL",
+                    object_id: "ns=3;s=0WTX99CT910//MWtTempObFlaRec.U_WL",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910A/MAXWtTempRec.U",
+                    opcua_id: "ns=3;s=0WTX99CT910A//MAXWtTempRec.U",
+                    object_id: "ns=3;s=0WTX99CT910A//MAXWtTempRec.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910/MWtTempObFlaRec.U_WH",
+                    opcua_id: "ns=3;s=0WTX99CT910//MWtTempObFlaRec.U_WH",
+                    object_id: "ns=3;s=0WTX99CT910//MWtTempObFlaRec.U_WH",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910/MWtTempObFlaRec.U_AL",
+                    opcua_id: "ns=3;s=0WTX99CT910//MWtTempObFlaRec.U_AL",
+                    object_id: "ns=3;s=0WTX99CT910//MWtTempObFlaRec.U_AL",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910/MWtTempObFlaRec.U_AH",
+                    opcua_id: "ns=3;s=0WTX99CT910//MWtTempObFlaRec.U_AH",
+                    object_id: "ns=3;s=0WTX99CT910//MWtTempObFlaRec.U_AH",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX50CT001B/TempHoriTrennRec.U",
+                    opcua_id: "ns=3;s=0WTX50CT001B//TempHoriTrennRec.U",
+                    object_id: "ns=3;s=0WTX50CT001B//TempHoriTrennRec.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910A/SP_T_Rec_Grad_D1.U",
+                    opcua_id: "ns=3;s=0WTX99CT910A//SP_T_Rec_Grad_D1.U",
+                    object_id: "ns=3;s=0WTX99CT910A//SP_T_Rec_Grad_D1.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910/MWtTempObFlaRec.U",
+                    opcua_id: "ns=3;s=0WTX99CT910//MWtTempObFlaRec.U",
+                    object_id: "ns=3;s=0WTX99CT910//MWtTempObFlaRec.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910A/SP_T_Rec_Grad_D2.U",
+                    opcua_id: "ns=3;s=0WTX99CT910A//SP_T_Rec_Grad_D2.U",
+                    object_id: "ns=3;s=0WTX99CT910A//SP_T_Rec_Grad_D2.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910A/SP_T_Rec_Grad_WH.U",
+                    opcua_id: "ns=3;s=0WTX99CT910A//SP_T_Rec_Grad_WH.U",
+                    object_id: "ns=3;s=0WTX99CT910A//SP_T_Rec_Grad_WH.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT940B/MAXTDiff_TrgRah.U",
+                    opcua_id: "ns=3;s=0WTX99CT940B//MAXTDiff_TrgRah.U",
+                    object_id: "ns=3;s=0WTX99CT940B//MAXTDiff_TrgRah.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT940C/MAXTDiff_KuLuAus.U",
+                    opcua_id: "ns=3;s=0WTX99CT940C//MAXTDiff_KuLuAus.U",
+                    object_id: "ns=3;s=0WTX99CT940C//MAXTDiff_KuLuAus.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910A/MWtTempRec.U",
+                    opcua_id: "ns=3;s=0WTX99CT910A//MWtTempRec.U",
+                    object_id: "ns=3;s=0WTX99CT910A//MWtTempRec.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910/MAXWtTempObFlaRe.U_WL",
+                    opcua_id: "ns=3;s=0WTX99CT910//MAXWtTempObFlaRe.U_WL",
+                    object_id: "ns=3;s=0WTX99CT910//MAXWtTempObFlaRe.U_WL",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT950C/MAXTDiff_KuLu_WL.U",
+                    opcua_id: "ns=3;s=0WTX99CT950C//MAXTDiff_KuLu_WL.U",
+                    object_id: "ns=3;s=0WTX99CT950C//MAXTDiff_KuLu_WL.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910/MAXWtTempObFlaRe.U_AL",
+                    opcua_id: "ns=3;s=0WTX99CT910//MAXWtTempObFlaRe.U_AL",
+                    object_id: "ns=3;s=0WTX99CT910//MAXWtTempObFlaRe.U_AL",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910/MAXWtTempObFlaRe.U_AH",
+                    opcua_id: "ns=3;s=0WTX99CT910//MAXWtTempObFlaRe.U_AH",
+                    object_id: "ns=3;s=0WTX99CT910//MAXWtTempObFlaRe.U_AH",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910/MAXWtTempObFlaRe.U",
+                    opcua_id: "ns=3;s=0WTX99CT910//MAXWtTempObFlaRe.U",
+                    object_id: "ns=3;s=0WTX99CT910//MAXWtTempObFlaRe.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX50CT901B/MAXTempTrennRec.U",
+                    opcua_id: "ns=3;s=0WTX50CT901B//MAXTempTrennRec.U",
+                    object_id: "ns=3;s=0WTX50CT901B//MAXTempTrennRec.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX50CT002B/TempVertTrennRec.U",
+                    opcua_id: "ns=3;s=0WTX50CT002B//TempVertTrennRec.U",
+                    object_id: "ns=3;s=0WTX50CT002B//TempVertTrennRec.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT950B/MAXTDiff_Rah_Mem.U",
+                    opcua_id: "ns=3;s=0WTX99CT950B//MAXTDiff_Rah_Mem.U",
+                    object_id: "ns=3;s=0WTX99CT950B//MAXTDiff_Rah_Mem.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX30CT901C/MAXT_KuKanSeWdLu.U",
+                    opcua_id: "ns=3;s=0WTX30CT901C//MAXT_KuKanSeWdLu.U",
+                    object_id: "ns=3;s=0WTX30CT901C//MAXT_KuKanSeWdLu.U",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0WTX99CT910/MAXWtTempObFlaRe.U_WH",
+                    opcua_id: "ns=3;s=0WTX99CT910//MAXWtTempObFlaRe.U_WH",
+                    object_id: "ns=3;s=0WTX99CT910//MAXWtTempObFlaRe.U_WH",
+                    inputArguments: []
+                }
+            ]
+        },
+        {
+            id: "urn:ngsi-ld:PCS-STJ:SteamTurbinePlant:10",
+            type: "SteamTurbinePlant",
+            mappings: [
+                {
+                    ocb_id: "0BLE10CS002/Drehzahl_DT.U_WL ",
+                    opcua_id: "ns=3;s=0BLE10CS002//Drehzahl_DT.U_WL ",
+                    object_id: "ns=3;s=0BLE10CS002//Drehzahl_DT.U_WL ",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0BLE10CS002/Drehzahl_DT.U_WH ",
+                    opcua_id: "ns=3;s=0BLE10CS002//Drehzahl_DT.U_WH ",
+                    object_id: "ns=3;s=0BLE10CS002//Drehzahl_DT.U_WH ",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0BLE10CS002/Drehzahl_DT.U_AH ",
+                    opcua_id: "ns=3;s=0BLE10CS002//Drehzahl_DT.U_AH ",
+                    object_id: "ns=3;s=0BLE10CS002//Drehzahl_DT.U_AH ",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0BLE10CS002/Drehzahl_DT.U",
+                    opcua_id: "ns=3;s=0BLE10CS002//Drehzahl_DT.U",
+                    object_id: "ns=3;s=0BLE10CS002//Drehzahl_DT.U",
+                    inputArguments: []
+                }
+            ]
+        },
+        {
+            id: "urn:ngsi-ld:PCS-STJ:Superheater:20",
+            type: "Superheater",
+            mappings: [
+                {
+                    ocb_id: "0HAH20CT002/T_DamAusUebHitz2.PV_IN",
+                    opcua_id: "ns=3;s=0HAH20CT002//T_DamAusUebHitz2.PV_IN",
+                    object_id: "ns=3;s=0HAH20CT002//T_DamAusUebHitz2.PV_IN",
+                    inputArguments: []
+                },
+                {
+                    ocb_id: "0HAH20CT002/T_DamAusUebHitz2.LMN",
+                    opcua_id: "ns=3;s=0HAH20CT002//T_DamAusUebHitz2.LMN",
+                    object_id: "ns=3;s=0HAH20CT002//T_DamAusUebHitz2.LMN",
+                    inputArguments: []
+                }
+            ]
+        },
+        {
+            id: "urn:ngsi-ld:PCS-STJ:TransferMeter:10",
+            type: "TransferMeter",
+            mappings: [
+                {
+                    ocb_id: "0GKA10CF501/DurFl_RoWa_.ZAEHLWERT",
+                    opcua_id: "ns=3;s=0GKA10CF501//DurFl_RoWa_.ZAEHLWERT",
+                    object_id: "ns=3;s=0GKA10CF501//DurFl_RoWa_.ZAEHLWERT",
+                    inputArguments: []
+                }
+            ]
+        }
+    ],

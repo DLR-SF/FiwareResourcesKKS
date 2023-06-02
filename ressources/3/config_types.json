@@ -1,0 +1,220 @@
+
+#################
+# TYPES SECTION #
+#################
+    types: {
+        ChemicalSupplyDosing: {
+            active: [
+                {
+                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SPOP_HL",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0GCN10AP010/WAB_DosPu_NH4OH.FB_SPEED",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SP_AUT",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SP_GRAD",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SP_OP",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SP_RAMP",
+                    type: "https://schema.org/Boolean"
+                },
+                {
+                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SPOP_LL",
+                    type: "https://schema.org/Number"
+                }
+            ],
+            lazy: [],
+            commands: []
+        },
+        DeionizedWater: {
+            active: [
+                {
+                    name: "0GHC20AA001/NivRV_SpWB.FB_MV",
+                    type: "https://schema.org/Number"
+                }
+            ],
+            lazy: [],
+            commands: []
+        },
+        DuctSystem: {
+            active: [
+                {
+                    name: "0HLA11DT021/T_RegAustrAbs_MW.IN13",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0HLA11DT021/T_RegAustrAbs_MW.IN12",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0HLA11DT021/T_RegAustrAbs_MW.IN16",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0HLA11DT021/T_RegAustrAbs_MW.IN15",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0HLA11DT021/T_RegAustrAbs_MW.IN14",
+                    type: "https://schema.org/Number"
+                }
+            ],
+            lazy: [],
+            commands: []
+        },
+        Receiver: {
+            active: [
+                {
+                    name: "0WTX99CT910/MWtTempObFlaRec.U_WL",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910A/MAXWtTempRec.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910/MWtTempObFlaRec.U_WH",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910/MWtTempObFlaRec.U_AL",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910/MWtTempObFlaRec.U_AH",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX50CT001B/TempHoriTrennRec.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910A/SP_T_Rec_Grad_D1.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910/MWtTempObFlaRec.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910A/SP_T_Rec_Grad_D2.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910A/SP_T_Rec_Grad_WH.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT940B/MAXTDiff_TrgRah.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT940C/MAXTDiff_KuLuAus.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910A/MWtTempRec.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910/MAXWtTempObFlaRe.U_WL",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT950C/MAXTDiff_KuLu_WL.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910/MAXWtTempObFlaRe.U_AL",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910/MAXWtTempObFlaRe.U_AH",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910/MAXWtTempObFlaRe.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX50CT901B/MAXTempTrennRec.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX50CT002B/TempVertTrennRec.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT950B/MAXTDiff_Rah_Mem.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX30CT901C/MAXT_KuKanSeWdLu.U",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0WTX99CT910/MAXWtTempObFlaRe.U_WH",
+                    type: "https://schema.org/Number"
+                }
+            ],
+            lazy: [],
+            commands: []
+        },
+        SteamTurbinePlant: {
+            active: [
+                {
+                    name: "0BLE10CS002/Drehzahl_DT.U_WL ",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0BLE10CS002/Drehzahl_DT.U_WH ",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0BLE10CS002/Drehzahl_DT.U_AH ",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0BLE10CS002/Drehzahl_DT.U",
+                    type: "https://schema.org/Number"
+                }
+            ],
+            lazy: [],
+            commands: []
+        },
+        Superheater: {
+            active: [
+                {
+                    name: "0HAH20CT002/T_DamAusUebHitz2.PV_IN",
+                    type: "https://schema.org/Number"
+                },
+                {
+                    name: "0HAH20CT002/T_DamAusUebHitz2.LMN",
+                    type: "https://schema.org/Number"
+                }
+            ],
+            lazy: [],
+            commands: []
+        },
+        TransferMeter: {
+            active: [
+                {
+                    name: "0GKA10CF501/DurFl_RoWa_.ZAEHLWERT",
+                    type: "https://schema.org/Number"
+                }
+            ],
+            lazy: [],
+            commands: []
+        }
+    },

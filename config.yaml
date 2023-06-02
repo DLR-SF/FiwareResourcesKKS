@@ -1,0 +1,144 @@
+##############################
+# General tool configuration #
+##############################
+0_general:
+    # enable / disable script execution
+    execute_script_1: "true"
+    execute_script_2: "true"
+    execute_script_3: "true"
+
+    # language of produced entities / meanings
+    # supported is english ("en") or german (de)
+    language: "en"
+
+
+#####################################################################
+# Script 1: Group tags into entites and assign meaning to tag names #
+#####################################################################
+1_group_tags_and_assign_meaning:
+    # relative file path to input file (Export of PCS tags)
+    # mandatory fields:
+    # -> field with (opc ua) nametag (input_column_attribute_name)
+    # -> field with (opc ua) type (input_column_attribute_type)
+    filepath_input: "ressources/1/export_pcs.xlsx"
+
+    # relative file path to output file (Extended input file with tags and meanings)
+    # mandatory fields:
+    # -> field with name for kks level 0 (output_column_attribute_kks_0)
+    # -> ...
+    # -> field with name for kks level 3 (output_column_attribute_kks_3)
+    # -> field with name for kks level 3 (output_column_attribute_ending)
+    # -> field with name for entity (output_column_attribute_entity)
+    # -> field with name for attribute meaning (output_column_attribute_meaning)
+    # -> field with name for opc mapping data type 1 (output_column_attribute_type_1)
+    # -> field with name for opc mapping data type 2 (output_column_attribute_type_2)
+    filepath_output: "ressources/1/export_groups_and_meaning.xlsx"
+
+    # column name of mandatory column with property name
+    input_column_attribute_name: "Name"
+
+    # column name of mandatory column with property data type
+    input_column_attribute_type: "Datatype"
+
+    # column name of mandatory column with property for kks layer 0
+    output_column_attribute_kks_0: "0_PlantOverall"
+
+    # column name of mandatory column with property for kks layer 1
+    output_column_attribute_kks_1: "1_Function"
+
+    # column name of mandatory column with property for nr of kks layer 1
+    output_column_attribute_kks_1_nr: "1_Function_Nr"
+
+    # column name of mandatory column with property for kks layer 2
+    output_column_attribute_kks_2: "2_Aggregate"
+
+    # column name of mandatory column with property for nr of kks layer 2
+    output_column_attribute_kks_2_nr: "2_Aggregate_Nr"
+
+    # column name of mandatory column with property for kks layer 3
+    output_column_attribute_kks_3: "3_OperatingRessources"
+
+    # column name of mandatory column with property for ending
+    output_column_attribute_ending: "Ending"
+
+    # column name of mandatory column with property for entity
+    output_column_attribute_entity: "Entity"
+
+    # column name of mandatory column with property for entity in alternative language
+    output_column_attribute_entity_other_lang: "Entity (alt. lang.)"
+
+    # column name of mandatory column with property for ending
+    output_column_attribute_meaning: "Meaning"
+
+    # column name of mandatory output column with property to map other type systems (mapping value 1)
+    # for example: map opc ua variables to OpenAPI 3.0 types
+    output_column_attribute_type_1: "OpenAPI_3.0_Type"
+
+    # column name of mandatory output column with property to map other type systems (mapping value 2)
+    # for example: map opc ua variables to FIRWARE NGSI-LD types
+    output_column_attribute_type_2: "X-NGSI-LD"
+
+    # column name of mapping table for abbreviation
+    mapping_column_abbreviation: 'abbreviation'
+
+    # column name of mapping table for aggregate
+    mapping_column_aggregate: 'aggregate'
+
+    # column name of mapping table for type name
+    mapping_column_type_name: 'OPC_Name'
+
+    # column name of mapping table for mapping type
+    mapping_column_map_type_name: 'OpenAPI_3.0_Type'
+
+    # relative file path to mapping file that helps to assign meanings to KKS names
+    filepath_kks_meanings: "ressources/1/mappings_meaning.xlsx"
+
+
+##########################################################################################
+# Script 2: Create FIWARE smart data model for extracted tags with semantics from step 1 #
+##########################################################################################
+2_create_fiware_smart_data_model:
+    # relative file path to input file (Result from script 1)
+    filepath_input: "ressources/1/export_groups_and_meaning.xlsx"
+
+    # relative file path to output file (FIWARE Datamodel schema.yaml file)
+    filepath_output: "ressources/2/schema.yaml"
+
+    # cut prepared schema.yaml from a certain point when executing the script several time
+    # using this you can append new pcs values to already existing schema.yaml
+    # set 0 if you don't won't to truncate file
+    clear_existing_file_from_line: 50
+
+    # Description of entity
+    # -> You can use variables ENTITY_NAME / ALT_ENT_NAME / FUNCTION_CODE in your description
+    # -> FUNCTION_CODE: KKS function code of level 1
+    # -> ENTITY_NAME: Name of the entity derived by cleaned function meaning (kks level 1)
+    # -> ENTITY_NAME_OL: Alternative name of the entity in another language
+    entitiy_description: "Process management system function 'ENTITY_NAME' with KKS function code: 'FUNCTION_CODE' (de: 'ALT_ENT_NAME')"
+
+    # Description of default property for relation to PLS
+    #subsystem_description: "Diese Komponente ist eine Subkomponente eines anderen Systems"
+    subsystem_description: "This component is a sub component of another system"
+
+    # mandatory properties
+    mandatory_properties:
+        - "id"
+        - "type"
+        - "dateObserved"
+        - "isSubsystemOf"
+
+##############################################################
+# Script 3: Create FIWARE configuration for OPC UA IoT-Agent #
+##############################################################
+3_create_fiware_iotagent_configuration:
+    # relative file path to input file (Result from script 1)
+    filepath_input: "ressources/1/export_groups_and_meaning.xlsx"
+
+    # relative file path to output file (FIWARE IoT-Agent config for types section)
+    filepath_output_types: "ressources/3/config_types.json"
+
+    # relative file path to output file (FIWARE IoT-Agent config for context sections)
+    filepath_output_context: "ressources/3/config_context.json"
+
+    # opc ua namespace
+    opc_ua_namespace: 3
