@@ -40,6 +40,9 @@
     # column name of mandatory column with property data type
     input_column_attribute_type: "Datatype"
 
+    # column name of mandatory column with cleaned attribute name
+    # ETSI NGSI-LD standard only allows digits, letters, underscore or column
+    output_column_attribute_cleaned_kks_name: "Cleaned_KKS_name"
     # column name of mandatory column with property for kks layer 0
     output_column_attribute_kks_0: "0_PlantOverall"
 

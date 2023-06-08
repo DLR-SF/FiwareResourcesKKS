@@ -95,43 +95,43 @@ components:
           type: "string"
           x-ngsi:
             type: "Property"
-        0GCN10AP010/WAB_DosPu_NH4OH.SPOP_HL:
+        0GCN10AP010:WAB_DosPu_NH4OH:SPOP_HL:
           description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Upper set point operating limit)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0GCN10AP010/WAB_DosPu_NH4OH.FB_SPEED:
+        0GCN10AP010:WAB_DosPu_NH4OH:FB_SPEED:
           description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Speed of the actuator)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0GCN10AP010/WAB_DosPu_NH4OH.SP_AUT:
+        0GCN10AP010:WAB_DosPu_NH4OH:SP_AUT:
           description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Automatic setpoint)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0GCN10AP010/WAB_DosPu_NH4OH.SP_GRAD:
+        0GCN10AP010:WAB_DosPu_NH4OH:SP_GRAD:
           description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Maximum permissible setpoint change per time base RSPTIME)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0GCN10AP010/WAB_DosPu_NH4OH.SP_OP:
+        0GCN10AP010:WAB_DosPu_NH4OH:SP_OP:
           description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Operator input Setpoint)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0GCN10AP010/WAB_DosPu_NH4OH.SP_RAMP:
+        0GCN10AP010:WAB_DosPu_NH4OH:SP_RAMP:
           description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Switching on the setpoint ramp)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0GCN10AP010/WAB_DosPu_NH4OH.SPOP_LL:
+        0GCN10AP010:WAB_DosPu_NH4OH:SPOP_LL:
           description: "Chemical supply dosing Nr. 10 Aggregate Pump Nr. 010  (Lower set point operating limit)"
           type: "number"
           x-ngsi:
@@ -185,7 +185,7 @@ components:
           type: "string"
           x-ngsi:
             type: "Property"
-        0GHC20AA001/NivRV_SpWB.FB_MV:
+        0GHC20AA001:NivRV_SpWB:FB_MV:
           description: "Deionized water Nr. 20 Aggregate Fitting Nr. 001  (Position feedback of a control valve)"
           type: "number"
           x-ngsi:
@@ -239,31 +239,31 @@ components:
           type: "string"
           x-ngsi:
             type: "Property"
-        0HLA11DT021/T_RegAustrAbs_MW.IN13:
+        0HLA11DT021:T_RegAustrAbs_MW:IN13:
           description: "Duct system Nr. 11 Control loop Temperature Nr. 021  (.IN13)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0HLA11DT021/T_RegAustrAbs_MW.IN12:
+        0HLA11DT021:T_RegAustrAbs_MW:IN12:
           description: "Duct system Nr. 11 Control loop Temperature Nr. 021  (.IN12)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0HLA11DT021/T_RegAustrAbs_MW.IN16:
+        0HLA11DT021:T_RegAustrAbs_MW:IN16:
           description: "Duct system Nr. 11 Control loop Temperature Nr. 021  (.IN16)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0HLA11DT021/T_RegAustrAbs_MW.IN15:
+        0HLA11DT021:T_RegAustrAbs_MW:IN15:
           description: "Duct system Nr. 11 Control loop Temperature Nr. 021  (.IN15)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0HLA11DT021/T_RegAustrAbs_MW.IN14:
+        0HLA11DT021:T_RegAustrAbs_MW:IN14:
           description: "Duct system Nr. 11 Control loop Temperature Nr. 021  (.IN14)"
           type: "number"
           x-ngsi:
@@ -317,139 +317,139 @@ components:
           type: "string"
           x-ngsi:
             type: "Property"
-        0WTX99CT910/MWtTempObFlaRec.U_WL:
+        0WTX99CT910:MWtTempObFlaRec:U_WL:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (LL warning)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0WTX99CT910A/MAXWtTempRec.U:
+        0WTX99CT910A:MAXWtTempRec:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910 A (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT910/MWtTempObFlaRec.U_WH:
+        0WTX99CT910:MWtTempObFlaRec:U_WH:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (HL warning)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0WTX99CT910/MWtTempObFlaRec.U_AL:
+        0WTX99CT910:MWtTempObFlaRec:U_AL:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (LL alarm)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0WTX99CT910/MWtTempObFlaRec.U_AH:
+        0WTX99CT910:MWtTempObFlaRec:U_AH:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (HL alarm)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0WTX50CT001B/TempHoriTrennRec.U:
+        0WTX50CT001B:TempHoriTrennRec:U:
           description: "Receiver Nr. 50 Measuring circuit Temperature Nr. 001 B (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT910A/SP_T_Rec_Grad_D1.U:
+        0WTX99CT910A:SP_T_Rec_Grad_D1:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910 A (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT910/MWtTempObFlaRec.U:
+        0WTX99CT910:MWtTempObFlaRec:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT910A/SP_T_Rec_Grad_D2.U:
+        0WTX99CT910A:SP_T_Rec_Grad_D2:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910 A (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT910A/SP_T_Rec_Grad_WH.U:
+        0WTX99CT910A:SP_T_Rec_Grad_WH:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910 A (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT940B/MAXTDiff_TrgRah.U:
+        0WTX99CT940B:MAXTDiff_TrgRah:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 940 B (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT940C/MAXTDiff_KuLuAus.U:
+        0WTX99CT940C:MAXTDiff_KuLuAus:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 940 C (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT910A/MWtTempRec.U:
+        0WTX99CT910A:MWtTempRec:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910 A (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT910/MAXWtTempObFlaRe.U_WL:
+        0WTX99CT910:MAXWtTempObFlaRe:U_WL:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (LL warning)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0WTX99CT950C/MAXTDiff_KuLu_WL.U:
+        0WTX99CT950C:MAXTDiff_KuLu_WL:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 950 C (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT910/MAXWtTempObFlaRe.U_AL:
+        0WTX99CT910:MAXWtTempObFlaRe:U_AL:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (LL alarm)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0WTX99CT910/MAXWtTempObFlaRe.U_AH:
+        0WTX99CT910:MAXWtTempObFlaRe:U_AH:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (HL alarm)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0WTX99CT910/MAXWtTempObFlaRe.U:
+        0WTX99CT910:MAXWtTempObFlaRe:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX50CT901B/MAXTempTrennRec.U:
+        0WTX50CT901B:MAXTempTrennRec:U:
           description: "Receiver Nr. 50 Measuring circuit Temperature Nr. 901 B (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX50CT002B/TempVertTrennRec.U:
+        0WTX50CT002B:TempVertTrennRec:U:
           description: "Receiver Nr. 50 Measuring circuit Temperature Nr. 002 B (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT950B/MAXTDiff_Rah_Mem.U:
+        0WTX99CT950B:MAXTDiff_Rah_Mem:U:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 950 B (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX30CT901C/MAXT_KuKanSeWdLu.U:
+        0WTX30CT901C:MAXT_KuKanSeWdLu:U:
           description: "Receiver Nr. 30 Measuring circuit Temperature Nr. 901 C (Analog value measurement)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0WTX99CT910/MAXWtTempObFlaRe.U_WH:
+        0WTX99CT910:MAXWtTempObFlaRe:U_WH:
           description: "Receiver Nr. 99 Measuring circuit Temperature Nr. 910  (HL warning)"
           type: "boolean"
           x-ngsi:
@@ -503,25 +503,25 @@ components:
           type: "string"
           x-ngsi:
             type: "Property"
-        0BLE10CS002/Drehzahl_DT.U_WL:
+        0BLE10CS002:Drehzahl_DT:U_WL:
           description: "Steam turbine plant Nr. 10 Measuring circuit velocity speed frequency Nr. 002  (LL warning)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0BLE10CS002/Drehzahl_DT.U_WH:
+        0BLE10CS002:Drehzahl_DT:U_WH:
           description: "Steam turbine plant Nr. 10 Measuring circuit velocity speed frequency Nr. 002  (HL warning)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0BLE10CS002/Drehzahl_DT.U_AH:
+        0BLE10CS002:Drehzahl_DT:U_AH:
           description: "Steam turbine plant Nr. 10 Measuring circuit velocity speed frequency Nr. 002  (HL alarm)"
           type: "boolean"
           x-ngsi:
             model: "https://schema.org/Boolean"
             type: "Property"
-        0BLE10CS002/Drehzahl_DT.U:
+        0BLE10CS002:Drehzahl_DT:U:
           description: "Steam turbine plant Nr. 10 Measuring circuit velocity speed frequency Nr. 002  (Analog value measurement)"
           type: "number"
           x-ngsi:
@@ -575,13 +575,13 @@ components:
           type: "string"
           x-ngsi:
             type: "Property"
-        0HAH20CT002/T_DamAusUebHitz2.PV_IN:
+        0HAH20CT002:T_DamAusUebHitz2:PV_IN:
           description: "Superheater Nr. 20 Measuring circuit Temperature Nr. 002  (Analog value controller)"
           type: "number"
           x-ngsi:
             model: "https://schema.org/Number"
             type: "Property"
-        0HAH20CT002/T_DamAusUebHitz2.LMN:
+        0HAH20CT002:T_DamAusUebHitz2:LMN:
           description: "Superheater Nr. 20 Measuring circuit Temperature Nr. 002  (Control value controller)"
           type: "number"
           x-ngsi:
@@ -635,7 +635,7 @@ components:
           type: "string"
           x-ngsi:
             type: "Property"
-        0GKA10CF501/DurFl_RoWa_.ZAEHLWERT:
+        0GKA10CF501:DurFl_RoWa_:ZAEHLWERT:
           description: "Transfer meter Nr. 10 Measuring circuit flow flow rate Nr. 501  (Counter)"
           type: "number"
           x-ngsi:

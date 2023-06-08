@@ -33,6 +33,8 @@ class GroupTagsAndAssignMeaning():
         # columns
         self.column_name = self.configparser.returnElementValue(self.section_name, 'input_column_attribute_name')
         self.column_type = self.configparser.returnElementValue(self.section_name, 'input_column_attribute_type')
+        self.column_cleaned_name = self.configparser.returnElementValue(self.section_name, 
+                                                                        'output_column_attribute_cleaned_kks_name')
         self.column_kks_0 = self.configparser.returnElementValue(self.section_name, 'output_column_attribute_kks_0')
         self.column_kks_1 = self.configparser.returnElementValue(self.section_name, 'output_column_attribute_kks_1')
         self.column_kks_1_nr = self.configparser.returnElementValue(self.section_name,
@@ -113,6 +115,7 @@ class GroupTagsAndAssignMeaning():
 
             # append to collection
             list_of_additions.append(parsed_values_with_name)
+
         return list_of_additions
 
     def parse_ending(self, name, append_values):
@@ -211,15 +214,20 @@ class GroupTagsAndAssignMeaning():
                 # No meaning can be found
                 ending_element = ending_value
 
-            # create name
-            name = "{} Nr. {} {} Nr. {} {} ({})".format(
+            # create meaning
+            meaning = "{} Nr. {} {} Nr. {} {} ({})".format(
                 function_element, function_nr, aggregate_element, aggregate_nr, operating_resources, ending_element)
-            print("Meaning Tag: {}".format(name))
-            if not name:
+            print("Meaning Tag: {}".format(meaning))
+            if not meaning:
                 # weird element -> use name
-                name = element_name
+                meaning = element_name
             # assign meaning for tag
-            list_of_additions.append(name)
+            list_of_additions.append(meaning)
+
+            # clean attribute name
+            cleaned_attr_name = element_name.replace("/", ":").replace(".", ":")
+            list_of_additions.append(cleaned_attr_name)
+            print("Cleaned attribute name: {}".format(cleaned_attr_name))
 
         else:
             # weird non-kkks element
@@ -291,10 +299,11 @@ class GroupTagsAndAssignMeaning():
         print("\ne) Export relevant elements excel")
         # add column to dataframe
         df_additions = pandas.DataFrame(list_of_additions,
-                                        columns=[self.column_kks_0, self.column_kks_1, self.column_kks_1_nr,
-                                                 self.column_kks_2, self.column_kks_2_nr, self.column_kks_3,
-                                                 self.column_ending, self.column_entity, self.column_entity_other_lang,
-                                                 self.column_meaning])
+                                        columns=[self.column_kks_0, self.column_kks_1, 
+                                                 self.column_kks_1_nr, self.column_kks_2, self.column_kks_2_nr, 
+                                                 self.column_kks_3, self.column_ending, self.column_entity, 
+                                                 self.column_entity_other_lang, self.column_meaning, 
+                                                 self.column_cleaned_name])
         df_types = pandas.DataFrame(list_of_types,
                                     columns=[self.column_type_map1, self.column_type_map2])
         df_all_cols = pandas.concat([df, df_additions, df_types], axis=1)

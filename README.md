@@ -118,23 +118,24 @@ Script 1 parses given attributes with the use of 'Identification System for Powe
    2. *filepath_output*: Path to output-excel for parsed names
    3. *input_column_attribute_name*: Name of the column that holds the Property Name
    4. *input_column_attribute_type*: Name of the column that holds the Property Type Name
-   5. *output_columnn_attribute_kks_0*: Column name of mandatory output column with property for kks layer 0 (plant overall)
-   6. *output_columnn_attribute_kks_1*: Column name of mandatory output column with property for kks layer 1 (function)
-   7. *output_columnn_attribute_kks_1_nr*: Column name of mandatory output column with number of property at kks layer 1
-   8. *output_columnn_attribute_kks_2*: Column name of mandatory output column with property for kks layer 2
-   9. *output_columnn_attribute_kks_2_nr*: Column name of mandatory output column with number of property at kks layer 2
-   10. *output_columnn_attribute_kks_3*: Column name of mandatory output column with property for kks layer 3
-   11. *output_columnn_attribute_entity*: Column name of mandatory output column with entity (logical group of tags)
-   12. *output_column_attribute_entity_other_lang*: Column name of mandatory output column with entity in an alternative language
-   13. *output_columnn_attribute_meaning*: Column name of mandatory output column with meaning of property
-   14. *output_columnn_attribute_ending*: Column name of mandatory output column with property ending 
-   15. *output_columnn_attribute_type_1*: Column name of mandatory output column with property for opc ua data type mapping eg. map an OpenAPI3.0 data type to opc type to create a FIWARE data model (step 3)
-   16. *output_columnn_attribute_type_2*: Column name of mandatory output column with property for opc ua data type mapping eg. map an NGSI-LD data type to opc type to create FIWARE IoT-Agent configuration (step 4)
-   17. *filepath_kks_meaning*: Path to meaning-tables of kks name system (maps abbreviation to meaning)
-   18. *mapping_column_type_name*:  Column name of mandatory column in mapping table with original variable type (default: 'OPC_Name')
-   19. *mapping_column_map_type_name*: Column name of mandatory column in mapping table with Smart Data Model type (default: 'OpenAPI_3.0_Type')
-   20. *mapping_column_abbreviation*: Column name of mandatory column in mapping table with abbreviation for function (default: 'abbreviation')
-   21. *mapping_column_aggregate*: Column name of mandatory column in mapping table with abbreviation for aggregate (default: 'aggregate')
+   5. *output_column_attribute_cleaned_kks_name*: Column name of mandatory output column with cleaned attribute name property (according to NGSI-LD standard)
+   6. *output_columnn_attribute_kks_0*: Column name of mandatory output column with property for kks layer 0 (plant overall)
+   7. *output_columnn_attribute_kks_1*: Column name of mandatory output column with property for kks layer 1 (function)
+   8. *output_columnn_attribute_kks_1_nr*: Column name of mandatory output column with number of property at kks layer 1
+   9. *output_columnn_attribute_kks_2*: Column name of mandatory output column with property for kks layer 2
+   10. *output_columnn_attribute_kks_2_nr*: Column name of mandatory output column with number of property at kks layer 2
+   11. *output_columnn_attribute_kks_3*: Column name of mandatory output column with property for kks layer 3
+   12. *output_columnn_attribute_entity*: Column name of mandatory output column with entity (logical group of tags)
+   13. *output_column_attribute_entity_other_lang*: Column name of mandatory output column with entity in an alternative language
+   14. *output_columnn_attribute_meaning*: Column name of mandatory output column with meaning of property
+   15. *output_columnn_attribute_ending*: Column name of mandatory output column with property ending 
+   16. *output_columnn_attribute_type_1*: Column name of mandatory output column with property for opc ua data type mapping eg. map an OpenAPI3.0 data type to opc type to create a FIWARE data model (step 3)
+   17. *output_columnn_attribute_type_2*: Column name of mandatory output column with property for opc ua data type mapping eg. map an NGSI-LD data type to opc type to create FIWARE IoT-Agent configuration (step 4)
+   18. *filepath_kks_meaning*: Path to meaning-tables of kks name system (maps abbreviation to meaning)
+   19. *mapping_column_type_name*:  Column name of mandatory column in mapping table with original variable type (default: 'OPC_Name')
+   20. *mapping_column_map_type_name*: Column name of mandatory column in mapping table with Smart Data Model type (default: 'OpenAPI_3.0_Type')
+   21. *mapping_column_abbreviation*: Column name of mandatory column in mapping table with abbreviation for function (default: 'abbreviation')
+   22. *mapping_column_aggregate*: Column name of mandatory column in mapping table with abbreviation for aggregate (default: 'aggregate')
 3. Create or check existing mapping file configured in *filepath_kks_meaning* to assign correct entitiy / attribute meaning 
 4. Configure execution of this step and set *execute_script_1* from general config section to true. Afterwards execute tool: ```py Main.py```
 5. Afterwards you should find an output file with splitted names and assigned meanings in configured output file
@@ -153,6 +154,7 @@ The input file will be parsed and an output file will be created with the help o
 * Create new columns in Excel which will be filled with the KKS name parts (see configuration for output columns)
 * Moreover a meaning to KKS name will be assigned by filling column entity (meaning of function at kks level 1) and meaning (composed of *[\<Function\> \<Function-Nr\> \<Aggregate\> \<Aggregate-Nr\> \<OperatingRessource (optional)\> (\<Meaning Suffix / Suffix\>)]*)
 * Tags which doesn't fullfill requirements of KKS name system will be added at *Name* column and other columns remain empty
+* Entity and attribute names will be cleaned, so that their names are according to NGSI-LD rules 
 
 </br>
 

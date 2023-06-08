@@ -6,31 +6,31 @@
         ChemicalSupplyDosing: {
             active: [
                 {
-                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SPOP_HL",
+                    name: "0GCN10AP010:WAB_DosPu_NH4OH:SPOP_HL",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0GCN10AP010/WAB_DosPu_NH4OH.FB_SPEED",
+                    name: "0GCN10AP010:WAB_DosPu_NH4OH:FB_SPEED",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SP_AUT",
+                    name: "0GCN10AP010:WAB_DosPu_NH4OH:SP_AUT",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SP_GRAD",
+                    name: "0GCN10AP010:WAB_DosPu_NH4OH:SP_GRAD",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SP_OP",
+                    name: "0GCN10AP010:WAB_DosPu_NH4OH:SP_OP",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SP_RAMP",
+                    name: "0GCN10AP010:WAB_DosPu_NH4OH:SP_RAMP",
                     type: "https://schema.org/Boolean"
                 },
                 {
-                    name: "0GCN10AP010/WAB_DosPu_NH4OH.SPOP_LL",
+                    name: "0GCN10AP010:WAB_DosPu_NH4OH:SPOP_LL",
                     type: "https://schema.org/Number"
                 }
             ],
@@ -40,7 +40,7 @@
         DeionizedWater: {
             active: [
                 {
-                    name: "0GHC20AA001/NivRV_SpWB.FB_MV",
+                    name: "0GHC20AA001:NivRV_SpWB:FB_MV",
                     type: "https://schema.org/Number"
                 }
             ],
@@ -50,23 +50,23 @@
         DuctSystem: {
             active: [
                 {
-                    name: "0HLA11DT021/T_RegAustrAbs_MW.IN13",
+                    name: "0HLA11DT021:T_RegAustrAbs_MW:IN13",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0HLA11DT021/T_RegAustrAbs_MW.IN12",
+                    name: "0HLA11DT021:T_RegAustrAbs_MW:IN12",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0HLA11DT021/T_RegAustrAbs_MW.IN16",
+                    name: "0HLA11DT021:T_RegAustrAbs_MW:IN16",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0HLA11DT021/T_RegAustrAbs_MW.IN15",
+                    name: "0HLA11DT021:T_RegAustrAbs_MW:IN15",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0HLA11DT021/T_RegAustrAbs_MW.IN14",
+                    name: "0HLA11DT021:T_RegAustrAbs_MW:IN14",
                     type: "https://schema.org/Number"
                 }
             ],
@@ -76,95 +76,95 @@
         Receiver: {
             active: [
                 {
-                    name: "0WTX99CT910/MWtTempObFlaRec.U_WL",
+                    name: "0WTX99CT910:MWtTempObFlaRec:U_WL",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910A/MAXWtTempRec.U",
+                    name: "0WTX99CT910A:MAXWtTempRec:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910/MWtTempObFlaRec.U_WH",
+                    name: "0WTX99CT910:MWtTempObFlaRec:U_WH",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910/MWtTempObFlaRec.U_AL",
+                    name: "0WTX99CT910:MWtTempObFlaRec:U_AL",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910/MWtTempObFlaRec.U_AH",
+                    name: "0WTX99CT910:MWtTempObFlaRec:U_AH",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX50CT001B/TempHoriTrennRec.U",
+                    name: "0WTX50CT001B:TempHoriTrennRec:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910A/SP_T_Rec_Grad_D1.U",
+                    name: "0WTX99CT910A:SP_T_Rec_Grad_D1:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910/MWtTempObFlaRec.U",
+                    name: "0WTX99CT910:MWtTempObFlaRec:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910A/SP_T_Rec_Grad_D2.U",
+                    name: "0WTX99CT910A:SP_T_Rec_Grad_D2:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910A/SP_T_Rec_Grad_WH.U",
+                    name: "0WTX99CT910A:SP_T_Rec_Grad_WH:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT940B/MAXTDiff_TrgRah.U",
+                    name: "0WTX99CT940B:MAXTDiff_TrgRah:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT940C/MAXTDiff_KuLuAus.U",
+                    name: "0WTX99CT940C:MAXTDiff_KuLuAus:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910A/MWtTempRec.U",
+                    name: "0WTX99CT910A:MWtTempRec:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910/MAXWtTempObFlaRe.U_WL",
+                    name: "0WTX99CT910:MAXWtTempObFlaRe:U_WL",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT950C/MAXTDiff_KuLu_WL.U",
+                    name: "0WTX99CT950C:MAXTDiff_KuLu_WL:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910/MAXWtTempObFlaRe.U_AL",
+                    name: "0WTX99CT910:MAXWtTempObFlaRe:U_AL",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910/MAXWtTempObFlaRe.U_AH",
+                    name: "0WTX99CT910:MAXWtTempObFlaRe:U_AH",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910/MAXWtTempObFlaRe.U",
+                    name: "0WTX99CT910:MAXWtTempObFlaRe:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX50CT901B/MAXTempTrennRec.U",
+                    name: "0WTX50CT901B:MAXTempTrennRec:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX50CT002B/TempVertTrennRec.U",
+                    name: "0WTX50CT002B:TempVertTrennRec:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT950B/MAXTDiff_Rah_Mem.U",
+                    name: "0WTX99CT950B:MAXTDiff_Rah_Mem:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX30CT901C/MAXT_KuKanSeWdLu.U",
+                    name: "0WTX30CT901C:MAXT_KuKanSeWdLu:U",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0WTX99CT910/MAXWtTempObFlaRe.U_WH",
+                    name: "0WTX99CT910:MAXWtTempObFlaRe:U_WH",
                     type: "https://schema.org/Number"
                 }
             ],
@@ -174,19 +174,19 @@
         SteamTurbinePlant: {
             active: [
                 {
-                    name: "0BLE10CS002/Drehzahl_DT.U_WL ",
+                    name: "0BLE10CS002:Drehzahl_DT:U_WL ",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0BLE10CS002/Drehzahl_DT.U_WH ",
+                    name: "0BLE10CS002:Drehzahl_DT:U_WH ",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0BLE10CS002/Drehzahl_DT.U_AH ",
+                    name: "0BLE10CS002:Drehzahl_DT:U_AH ",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0BLE10CS002/Drehzahl_DT.U",
+                    name: "0BLE10CS002:Drehzahl_DT:U",
                     type: "https://schema.org/Number"
                 }
             ],
@@ -196,11 +196,11 @@
         Superheater: {
             active: [
                 {
-                    name: "0HAH20CT002/T_DamAusUebHitz2.PV_IN",
+                    name: "0HAH20CT002:T_DamAusUebHitz2:PV_IN",
                     type: "https://schema.org/Number"
                 },
                 {
-                    name: "0HAH20CT002/T_DamAusUebHitz2.LMN",
+                    name: "0HAH20CT002:T_DamAusUebHitz2:LMN",
                     type: "https://schema.org/Number"
                 }
             ],
@@ -210,7 +210,7 @@
         TransferMeter: {
             active: [
                 {
-                    name: "0GKA10CF501/DurFl_RoWa_.ZAEHLWERT",
+                    name: "0GKA10CF501:DurFl_RoWa_:ZAEHLWERT",
                     type: "https://schema.org/Number"
                 }
             ],

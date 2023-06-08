@@ -26,6 +26,8 @@ class CreateFiwareSDM():
         # mandatory columns
         self.column_name = self.configparser.returnElementValue(self.section_name_1,
                                                                 'input_column_attribute_name')
+        self.column_cleaned_name = self.configparser.returnElementValue(self.section_name_1,
+                                                                'output_column_attribute_cleaned_kks_name')
         self.column_type = self.configparser.returnElementValue(self.section_name_1,
                                                                 'input_column_attribute_type')
         self.column_kks_0 = self.configparser.returnElementValue(self.section_name_1,
@@ -304,7 +306,7 @@ class CreateFiwareSDM():
                 # clean name for entity
                 cleaned_entity_name = self.clean_entity_name(
                     row[self.column_entity])
-                cleaned_attribute_name = row[self.column_name].strip()
+                cleaned_attribute_name = row[self.column_cleaned_name].strip()
 
                 # Check if new entity
                 # if not append a property to existing entity

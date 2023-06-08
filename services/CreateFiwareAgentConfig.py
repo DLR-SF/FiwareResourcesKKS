@@ -33,6 +33,8 @@ class CreateFiwareAgentConfig():
             self.section_name, 'opc_ua_namespace')
         self.column_name = self.configparser.returnElementValue(
             self.section_name_1, 'input_column_attribute_name')
+        self.column_cleaned_name = self.configparser.returnElementValue(
+            self.section_name_1, 'output_column_attribute_cleaned_kks_name')        
         self.column_type = self.configparser.returnElementValue(
             self.section_name_1, 'input_column_attribute_type')
         self.column_kks_1_nr = self.configparser.returnElementValue(
@@ -135,19 +137,19 @@ class CreateFiwareAgentConfig():
                 # Check if new entity
                 if cleaned_entity_name in all_entities:
                     # Duplicate attribute name
-                    if row[self.column_name] in entitiy_attributes:
+                    if row[self.column_cleaned_name] in entitiy_attributes:
                         # duplicate
                         self.duplicate_entitiy_attributes.append(
-                            row[self.column_name])
+                            row[self.column_cleaned_name])
                     else:
                         # add new attribute to entity property list
                         last_element_property = self.check_if_last_element(
                             df, row[self.column_entity], index)
                         self.level_3_context_append_property(
-                            filehandler_output, row[self.column_name],
-                            last_element_property)
-                        entitiy_attributes.append(row[self.column_name])
-                        print("-> Property: {}".format(row[self.column_name]))
+                            filehandler_output, row[self.column_cleaned_name],
+                            row[self.column_name], last_element_property)
+                        entitiy_attributes.append(row[self.column_cleaned_name])
+                        print("-> Property: {}".format(row[self.column_cleaned_name]))
 
                 else:
                     # create new entity
@@ -170,16 +172,16 @@ class CreateFiwareAgentConfig():
                     last_element_property = self.check_if_last_element(
                         df, row[self.column_entity], index)
                     self.level_3_context_append_property(
-                        filehandler_output, row[self.column_name],
-                        last_element_property)
+                        filehandler_output, row[self.column_cleaned_name],
+                        row[self.column_name], last_element_property)
 
-                    entitiy_attributes.append(row[self.column_name])
-                    print("-> Property: {}".format(row[self.column_name]))
+                    entitiy_attributes.append(row[self.column_cleaned_name])
+                    print("-> Property: {}".format(row[self.column_cleaned_name]))
             else:
                 # Case 2: No a valid KKS name
                 print("\nError: Element {} has no valid KKS name!".format(
-                    row[self.column_name]))
-                self.non_kks_entities.append(row[self.column_name])
+                    row[self.column_cleaned_name]))
+                self.non_kks_entities.append(row[self.column_cleaned_name])
 
     def transform_opc_da_to_ua_name(self, name):
         '''
@@ -191,7 +193,7 @@ class CreateFiwareAgentConfig():
         cleaned_name = name.replace("/", "//")
         return cleaned_name
 
-    def level_3_context_append_property(self, filehandler_output, name, last_entity_property):
+    def level_3_context_append_property(self, filehandler_output, cleaned_name, name, last_entity_property):
         '''
         Create new property for context section type
         :param name:
@@ -203,7 +205,7 @@ class CreateFiwareAgentConfig():
 
         filehandler_output.write("                {\n")
         filehandler_output.write(
-            '                    ocb_id: "{}",\n'.format(name))
+            '                    ocb_id: "{}",\n'.format(cleaned_name))
         filehandler_output.write('                    opcua_id: "ns={};s={}",\n'.format(
             self.opc_ua_ns, opcua_name))
         filehandler_output.write('                    object_id: "ns={};s={}",\n'.format(
@@ -264,19 +266,19 @@ class CreateFiwareAgentConfig():
                 # Check if new entity
                 if cleaned_entity_name in self.all_entities:
                     # Duplicate attribute name (normally because of missing suffix from text export error)
-                    if row[self.column_name] in entitiy_attributes:
+                    if row[self.column_cleaned_name] in entitiy_attributes:
                         # duplicate
                         print(
-                            "-> DUPLICATE PROPERTY: {}".format(row[self.column_name]))
+                            "-> DUPLICATE PROPERTY: {}".format(row[self.column_cleaned_name]))
                         self.duplicate_entitiy_attributes.append(
-                            row[self.column_name])
+                            row[self.column_cleaned_name])
                     else:
                         # add new attribute to entity property list
                         last_element = self.check_if_last_element(
                             df, row[self.column_entity], index)
                         self.level_4_types_append_property(
-                            filehandler_output, row[self.column_type_map2], row[self.column_name], last_element)
-                        entitiy_attributes.append(row[self.column_name])
+                            filehandler_output, row[self.column_type_map2], row[self.column_cleaned_name], last_element)
+                        entitiy_attributes.append(row[self.column_cleaned_name])
 
                 else:
                     # create new entity
@@ -295,14 +297,14 @@ class CreateFiwareAgentConfig():
                     last_element = self.check_if_last_element(
                         df, row[self.column_entity], index)
                     self.level_4_types_append_property(
-                        filehandler_output, row[self.column_type_map2], row[self.column_name], last_element)
+                        filehandler_output, row[self.column_type_map2], row[self.column_cleaned_name], last_element)
 
-                    entitiy_attributes.append(row[self.column_name])
+                    entitiy_attributes.append(row[self.column_cleaned_name])
             else:
                 # Case 2: No a valid KKS name
                 print("\nError: Element {} has no valid KKS name!".format(
-                    row[self.column_name]))
-                self.non_kks_entities.append(row[self.column_name])
+                    row[self.column_cleaned_name]))
+                self.non_kks_entities.append(row[self.column_cleaned_name])
 
         # close types section
         filehandler_output.write("    },")
